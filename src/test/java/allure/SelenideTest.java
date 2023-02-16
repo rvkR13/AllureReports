@@ -17,11 +17,12 @@ public class SelenideTest {
     @Test
     @Step("Поиск текста на странице \"Milestones\"")
     public void testGitHubStep() {
-        open(ADDRESS);
-        $("[aria-label=\"Search GitHub\"]").setValue(INPUT_VALUE).pressEnter();
-        $$(".v-align-middle").filter(text("selenide/selenide")).get(0).click();
-        $("#issues-tab").click();
-        $(byText(VALUE)).shouldBe(visible);
+       Steps steps =new Steps();
+        steps.openUrl(ADDRESS);
+        steps.searchValue(INPUT_VALUE);
+        steps.checkValue();
+        steps.clickElement();
+        steps.checkText(VALUE);
     }
 
     @Test
@@ -30,13 +31,15 @@ public class SelenideTest {
             open(ADDRESS);
         });
         step("Ввести в поисковую строку название репозитория и найти его", () -> {
-            $("[aria-label=\"Search GitHub\"]").setValue(INPUT_VALUE).pressEnter();
-            $$(".v-align-middle").filter(text("selenide/selenide")).get(0).click();
+            $("[aria-label=\"Search GitHub\"]")
+                    .setValue(INPUT_VALUE).pressEnter();
+            $$(".v-align-middle").filter(text("selenide/selenide"))
+                    .get(0).click();
         });
         step("перейти во вкладку issues", () -> {
             $("#issues-tab").click();
         });
-        step("проверить что на странице присутствует текст "+VALUE, () -> {
+        step("проверить что на странице присутствует текст " + VALUE, () -> {
             $(byText(VALUE)).shouldBe(visible);
         });
     }
