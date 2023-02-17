@@ -27,8 +27,6 @@ dependencies {
     //Allure аннотации
     implementation'io.qameta.allure:allure-rest-assured:2.17.3'
     testImplementation 'io.qameta.allure:allure-junit5:2.17.3'
-//https://search.maven.org/artifact/ru.yandex.qatools.ashot/ashot/1.5.4/jar
-    implementation 'ru.yandex.qatools.ashot:ashot:1.5.4'
 }
 test {
     useJUnitPlatform()

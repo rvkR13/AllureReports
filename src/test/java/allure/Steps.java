@@ -43,6 +43,4 @@ public class Steps {
     public void checkText(String value) {
         $(byText(value)).shouldBe(visible);
     }
-
-
 }
