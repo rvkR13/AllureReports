@@ -17,7 +17,7 @@ public class SelenideTest {
     @Test
     @Step("Поиск текста на странице \"Milestones\"")
     public void testGitHubStep() {
-       Steps steps =new Steps();
+        Steps steps = new Steps();
         steps.openUrl(ADDRESS);
         steps.searchValue(INPUT_VALUE);
         steps.checkValue();
