@@ -9,6 +9,15 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+/**
+ * Три вариации тестов
+ * Состоящих из шагов:
+ * 1. Открыть страницу https://github.com
+ * 2. Ввести по поисковую строку текст "selenide"
+ * 3. Найти на странице репозиторий "selenide/selenide"
+ * 4. Перейти во вкладку issues
+ * 5. Проверить что на странице присутствует текст "Milestones"
+ */
 public class SelenideTest {
     String ADDRESS = "https://github.com";
     String INPUT_VALUE = "selenide";
