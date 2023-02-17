@@ -1,6 +1,6 @@
 package allure;
 
-import io.qameta.allure.Step;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -12,20 +12,24 @@ import static io.qameta.allure.Allure.step;
 public class SelenideTest {
     String ADDRESS = "https://github.com";
     String INPUT_VALUE = "selenide";
+    String CHECK_ELEMENT = "selenide/selenide";
     String VALUE = "Milestones";
 
+
     @Test
-    @Step("Поиск текста на странице \"Milestones\"")
+    @DisplayName("Шаги с аннотацией @Step")
     public void testGitHubStep() {
         Steps steps = new Steps();
         steps.openUrl(ADDRESS);
         steps.searchValue(INPUT_VALUE);
-        steps.checkValue();
+        steps.checkValue(CHECK_ELEMENT);
         steps.clickElement();
         steps.checkText(VALUE);
     }
 
+
     @Test
+    @DisplayName("Лямбда шаги через step")
     public void testGitHubLambda() {
         step("Открыть главную страницу", () -> {
             open(ADDRESS);
@@ -44,7 +48,9 @@ public class SelenideTest {
         });
     }
 
+
     @Test
+    @DisplayName("Чистый селенид")
     public void testGitHub() {
         open(ADDRESS);
         $("[aria-label=\"Search GitHub\"]").setValue(INPUT_VALUE).pressEnter();
