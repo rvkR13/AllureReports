@@ -18,12 +18,11 @@ import static io.qameta.allure.Allure.step;
  * 4. Перейти во вкладку issues
  * 5. Проверить что на странице присутствует текст "Milestones"
  */
-public class SelenideTest {
+public class SelenideTest  {
     String ADDRESS = "https://github.com";
     String INPUT_VALUE = "selenide";
     String CHECK_ELEMENT = "selenide/selenide";
     String VALUE = "Milestones";
-
 
     @Test
     @DisplayName("Шаги с аннотацией @Step")
@@ -35,7 +34,6 @@ public class SelenideTest {
         steps.clickElement();
         steps.checkText(VALUE);
     }
-
 
     @Test
     @DisplayName("Лямбда шаги через step")
@@ -56,7 +54,6 @@ public class SelenideTest {
             $(byText(VALUE)).shouldBe(visible);
         });
     }
-
 
     @Test
     @DisplayName("Чистый селенид")
