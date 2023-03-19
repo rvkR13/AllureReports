@@ -1,5 +1,5 @@
 # AllureReports :briefcase:
-Автотест по https://github.com
+#### Автотест по https://github.com
 
 1.Открытие главной страницы
 
@@ -9,7 +9,7 @@
 
 4.Проверка что на странице присутсвует элемент "Milestones"
 
-Тест представлен в трех вариантах:
+### Тест представлен в трех вариантах:
 
 1. Чистый Selenide
 
@@ -17,5 +17,5 @@
 
 3. Шаги с аннотацией @Step
 
-## Technology Stack
+### Technology Stack
 Использованные технологии: Java,Selenide,Gradle,Junit,Allure
