@@ -18,17 +18,14 @@ import static io.qameta.allure.Allure.step;
  * 4. Перейти во вкладку issues
  * 5. Проверить что на странице присутствует текст "Milestones"
  */
-public class SelenideTest  {
-    String ADDRESS = "https://github.com";
-    String INPUT_VALUE = "selenide";
-    String CHECK_ELEMENT = "selenide/selenide";
-    String VALUE = "Milestones";
+public class SelenideTest extends BaseTest {
+
 
     @Test
     @DisplayName("Шаги с аннотацией @Step")
     public void testGitHubStep() {
         Steps steps = new Steps();
-        steps.openUrl(ADDRESS);
+    //    steps.openUrl(ADDRESS);
         steps.searchValue(INPUT_VALUE);
         steps.checkValue(CHECK_ELEMENT);
         steps.clickElement();
@@ -38,9 +35,9 @@ public class SelenideTest  {
     @Test
     @DisplayName("Лямбда шаги через step")
     public void testGitHubLambda() {
-        step("Открыть главную страницу", () -> {
-            open(ADDRESS);
-        });
+//        step("Открыть главную страницу", () -> {
+//            open(ADDRESS);
+//        });
         step("Ввести в поисковую строку название репозитория и найти его", () -> {
             $("[aria-label=\"Search GitHub\"]")
                     .setValue(INPUT_VALUE).pressEnter();
@@ -58,7 +55,7 @@ public class SelenideTest  {
     @Test
     @DisplayName("Чистый селенид")
     public void testGitHub() {
-        open(ADDRESS);
+     //   open(ADDRESS);
         $("[aria-label=\"Search GitHub\"]").setValue(INPUT_VALUE).pressEnter();
         $$(".v-align-middle").filter(text("selenide/selenide")).get(0).click();
         $("#issues-tab").click();

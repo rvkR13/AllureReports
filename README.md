@@ -1,4 +1,4 @@
-# AllureReports
+# AllureReports :briefcase:
 Автотест по https://github.com
 
 1.Открытие главной страницы
@@ -17,4 +17,5 @@
 
 3. Шаги с аннотацией @Step
 
+## Technology Stack
 Использованные технологии: Java,Selenide,Gradle,Junit,Allure
