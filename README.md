@@ -21,5 +21,5 @@
 Использованные технологии: Java,Selenide,Gradle,Junit,Allure
 
 <picture>
-  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://memepedia.ru/wp-content/uploads/2019/08/programmist-s-mikrovolnovkoy-1.jpg">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://avatars.dzeninfra.ru/get-zen_doc/1587012/pub_5ccd9b67ffaa2300b352e32a_5ccda2ed02612c00b36f074c/scale_1200">
 </picture>
