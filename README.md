@@ -9,7 +9,7 @@
 
 4.Проверка что на странице присутсвует элемент "Milestones"
 
-### Тест представлен в трех вариантах:
+#### Тест представлен в трех вариантах:
 
 1. Чистый Selenide
 
@@ -17,5 +17,9 @@
 
 3. Шаги с аннотацией @Step
 
-### Technology Stack
+#### Technology Stack
 Использованные технологии: Java,Selenide,Gradle,Junit,Allure
+
+<picture>
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://memepedia.ru/wp-content/uploads/2019/08/programmist-s-mikrovolnovkoy-1.jpg">
+</picture>
